@@ -12,11 +12,9 @@ public class App {
         Locale.setDefault(Locale.US);
 	    Scanner sc = new Scanner(System.in);
 
-        ChessMatch chessMatch = new ChessMatch();
-        UI.printBoard(chessMatch.getPieces());
+        Position pos = new Position(8, 2);
+        System.out.println(pos);
 
-
-	    sc.close();
 	}
         
     }
