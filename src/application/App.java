@@ -3,7 +3,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import boardgame.Board;
-import boardgame.Position;
 import chess.ChessMatch;
 
 
