@@ -11,24 +11,21 @@ import chess.ChessPosition;
 
 public class App {
     public static void main(String[] args){
-	    Scanner sc = new Scanner(System.in);
-        ChessMatch chessMatch = new ChessMatch();
-        
-        int n = 1;
-
-        while (n == 1) {
-            UI.printBoard(chessMatch.getPieces());
-            System.out.print("Source: ");
-            ChessPosition source = UI.readChessPosition(sc);
-
-            sc.nextLine();
-            System.out.print("Target: ");
-            ChessPosition target = UI.readChessPosition(sc);
-    
-            ChessPiece capturedPiece = chessMatch.perfomeChessMove(source, target);
-        }
-    
-        sc.close();
+        Scanner sc = new Scanner(System.in);
+		ChessMatch chessMatch = new ChessMatch();
+		
+		while (true) {
+			UI.printBoard(chessMatch.getPieces());
+			System.out.println();
+			System.out.print("Source: ");
+			ChessPosition source = UI.readChessPosition(sc);
+			
+			System.out.println();
+			System.out.print("Target: ");
+			ChessPosition target = UI.readChessPosition(sc);
+			
+			ChessPiece capturedPiece = chessMatch.perfomeChessMove(source, target);
+		}
     }
     }
 
